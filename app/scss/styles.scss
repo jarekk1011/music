@@ -1,0 +1,22 @@
+/*
+    Basic Music Web Templemate
+    Author: Jaroslaw Kuca
+*/
+
+/*____________BASE________________
+variables, mixins
+*/
+@import "base/_index.scss";
+/*____________MODULES_______________
+site components
+*/
+@import "modules/_index.scss";
+/*____________LAYOUTS_______________
+layout styles
+*/
+@import "layout/_index.scss";
+
+/*____________LAYOUTS_______________
+layout styles
+*/
+@import "state/_index.scss";
