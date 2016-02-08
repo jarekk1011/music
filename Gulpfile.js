@@ -1,13 +1,14 @@
 var gulp = require('gulp'),
     browserSync = require('browser-sync'),
     reload = browserSync.reload,
-    sass = require('gulp-sass'),
+    // sass = require('gulp-sass'),
     del     = require('del'),
     imagemin = require('gulp-imagemin'),
     cache = require('gulp-cache'),
     runSequence = require('run-sequence'),
     notify = require('gulp-notify'),
     plumber = require('gulp-plumber'),
+    compass = require('gulp-compass'),
     gutil = require('gulp-util');
 
 //Error Handler
@@ -28,6 +29,8 @@ gulp.task('browser', function () {
     }
   });
 });
+
+
 //Clean dist/
 gulp.task('clean:dist', function() {
   return del.sync('dist');
@@ -58,28 +61,41 @@ gulp.task('copy-html', function() {
     .pipe(gulp.dest("dist/"))
     .pipe(reload({stream:true}));
 });
-gulp.task('styles', function() {
-  gulp.src('app/scss/*.scss')
-    .pipe(plumber({ errorHandler: onError }))
-    .pipe(sass())
-    .pipe(gulp.dest('app/css/'))
-    .pipe(reload({stream:true}));
-});
+// gulp.task('styles', function() {
+//   gulp.src('app/scss/*.scss')
+//     .pipe(plumber({ errorHandler: onError }))
+//     .pipe(sass())
+//     .pipe(gulp.dest('app/css/'))
+//     .pipe(reload({stream:true}));
+// });
 
 gulp.task('copy-css', function() {
   gulp.src('app/css/*.css')
     .pipe(gulp.dest('dist/css/'))
     .pipe(reload({stream:true}));
 });
+//Sass Compass
+gulp.task('compass', function() {
+  gulp.src('app/scss/**/*.scss')
+    .pipe(plumber({ errorHandler: onError }))
+    .pipe(compass({
+      config_file: 'config.rb',
+      css: 'app/css',
+      sass: 'app/scss'
+    }))
+    .pipe(gulp.dest('app/css'))
+    .pipe(reload({stream:true}));
+});
+
 //Watch
 gulp.task('watch', function(){
-  gulp.watch('app/scss/**/*.scss', ['styles']);
+  gulp.watch('app/scss/**/*.scss', ['compass']);
   gulp.watch("app/*.html").on('change', reload);
   gulp.watch("app/js/*.js").on('change', reload);
 });
 gulp.task('default', function(production) {
-  runSequence('clean:dist','watch','browser', production);
+  runSequence('clean:dist','compass','watch','browser', production);
 });
 gulp.task('build', function(build) {
-  runSequence('clean:dist', 'images', 'styles','copy-html','copy-css','js-file','fonts', build);
+  runSequence('clean:dist', 'images','compass','copy-html','copy-css','js-file','fonts', build);
 });
