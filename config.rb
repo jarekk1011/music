@@ -1,6 +1,4 @@
 # Compass CSS framework config file
-
-
 require 'compass-normalize'
 # Require any additional compass plugins here.
 
