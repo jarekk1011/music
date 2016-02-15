@@ -1,0 +1,36 @@
+.hell-button{
+  background-image: url('../img/play_hell.jpg');
+  color: #fff;
+}
+.night-button, .smoke-button{
+    color: $black;
+}
+.night-button{
+  background-image: url('../img/play_night.jpg');
+}
+.smoke-button{
+  background-image: url('../img/play_smoke.png');
+}
+
+.discography__buttons{
+  display: block;
+  // margin:calculateRem(30px) auto 0 auto;    media!!!!!
+  margin:calculateRem(30px) 0 calculateRem(70px) 0;
+  border:0;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: calculateRem(194px);
+  height: calculateRem(53px);
+}
+.slider__button{
+padding: 0;
+margin-top: 7%;
+}
+.right{
+  float: right;
+  clear: both;
+  }
+.left{
+  @include transform(rotate(-180deg));
+}

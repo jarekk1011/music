@@ -1,0 +1,42 @@
+.discography__heading, .concert__heading, .latter__heading, .history__heading{
+  padding-top: 5%;
+  padding-bottom: 5%;
+  text-align: center;
+  position: relative;
+}
+//discography
+.discography{
+  background: url('../img/discography_background.jpg') center bottom no-repeat;
+  background-size: 100% auto;
+  padding-bottom: 15%;
+}
+//concert
+.concert{
+  background-image: url('../img/concert_background.jpg');
+  padding-bottom: 10%;
+  @extend %background;
+}
+.concert__list{
+  padding-top:20%;
+}
+//slider
+.slider{
+	background-image: url('../img/slider.jpg');
+  @extend %background;
+  // padding-bottom: 20%;
+  .row{
+    margin: 0;
+  }
+}
+//upcoming
+.upcoming{
+  background-image: url('../img/upcoming_background.jpg');
+  @extend %background;
+  padding-bottom: 20%;
+}
+//history
+.history{
+  background-image: url('../img/history_background.jpg');
+  @extend %background;
+  padding-bottom: 40%;
+}

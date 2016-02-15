@@ -1,3 +1,19 @@
-// //compass modules
-// @import "compass/css3";
-// @import "compass/utilities";
+//compass modules
+@import "compass/css3";
+@import "compass/utilities";
+*{
+  margin: 0;
+  padding: 0;
+}
+html,body{
+  font-size: 100%;
+}
+hr{
+  border-top:1px solid $black;
+}
+// .container{
+//   width:1200px;
+// }
+ul{
+  list-style: none;
+}

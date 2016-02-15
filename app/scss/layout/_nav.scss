@@ -1,0 +1,18 @@
+.main-navigation{
+  visibility: hidden;
+  position: fixed;
+  top:0;
+  background-color:$opacity;
+  float: none;
+  z-index: 999;
+  -webkit-box-shadow: 0px 3px 25px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px 3px 25px 0px rgba(0,0,0,0.75);
+box-shadow: 0px 3px 25px 0px rgba(0,0,0,0.75);
+  &__list{
+    margin:0px;
+  }
+  &__item{
+    padding: 1rem;
+    height:calculateRem(60px);
+  }
+}

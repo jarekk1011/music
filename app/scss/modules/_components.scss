@@ -1,0 +1,129 @@
+//page logo
+h1{
+  text-align: center;
+  padding-top: 10rem;
+}
+//hr
+%hr{
+  margin: 0;
+}
+.concert hr, .latter hr{
+  width: 60%;
+  @extend %hr;
+}
+.new hr{
+  width: 90%;
+  @extend %hr;
+}
+.upcoming hr{
+  width: 23%;
+  @extend %hr;
+}
+.discography hr{
+  margin:0;
+}
+.history__slider hr {
+  display:inline-block;
+  width: 15%;
+  margin-bottom: 10px;
+}
+//latter
+.latter__indian-album{
+  background-image: url('../img/indian_album.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: auto;
+  width: 100%;
+  padding-bottom: 70%;
+}
+.latter__indian-album-r{
+  background-image: url('../img/indian_album_r.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: auto;
+  width: 100%;
+  padding-bottom: 70%;
+}
+.latter__chill-album{
+  background-image: url('../img/chill_album.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: auto;
+  width: 100%;
+  padding-bottom: 70%;
+}
+.latter__compositions >.row{
+  background-color: #f5f6f6;
+  margin-bottom: calculateRem(55px);
+}
+.latter__photo{
+  padding: 0;
+}
+.latter__stats{
+  // padding-top:calculateRem(55px);
+}
+//new
+.new{
+  display: block;
+  margin: 0 auto;
+}
+.new__list{
+  margin-top: 12%;
+  margin-bottom: 10%;
+}
+.new__list li{
+  margin-bottom: calculateRem(30px);
+}
+%new{
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  width: 100%;
+  height: 0;
+  max-width: 100%;
+  margin:0 auto;
+  padding-bottom: 100%;
+}
+.new_01{
+  background-image: url('../img/new_01.jpg');
+  @extend %new;
+}
+.new_02{
+  background-image: url('../img/new_02.jpg');
+  @extend %new;
+}
+.new_03{
+  background-image: url('../img/new_03.jpg');
+  @extend %new;
+}
+.new_04{
+  background-image: url('../img/new_04.jpg');
+  @extend %new;
+}
+.new_05{
+  background-image: url('../img/new_05.jpg');
+  @extend %new;
+
+}
+.new_06{
+  background-image: url('../img/new_06.jpg');
+  @extend %new;
+}
+%line{
+  display: block;
+  width: 1px;
+  margin-left: calculateRem(35px);
+  background-color: $black;
+}
+//upcoming
+.vertical-line-short{
+  height: calculateRem(50px);
+  @extend %line;
+}
+.vertical-line-long{
+  height: calculateRem(165px);
+  @extend %line;
+}

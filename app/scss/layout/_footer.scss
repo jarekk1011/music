@@ -1,0 +1,27 @@
+.contact__heading{
+	padding-top:35%;
+}
+.contact__social{
+	margin-top:20%;
+}
+.contact__main{
+	padding-right: 10%;
+}
+.contact__form{
+}
+.contact__adress{
+	padding-bottom: 10%;
+}
+
+//contact
+.contact{
+  background-image: url('../img/contact_background.jpg');
+  padding-bottom: 20%;
+  @extend %background;
+	background-size: contain;
+	background-position: center bottom;
+}
+//contact
+.contact__social{
+  border-left: 1px solid #000;
+}

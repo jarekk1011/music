@@ -1,4 +1,21 @@
 /* Font Colors */
-
+$gray:#999;
+$black:#000;
+$opacity:rgba(0,0,0,0.7);
 
 /* Background Colors */
+
+
+$primary-font-family: 'Open Sans', sans-serif;
+$dosis-font-family: 'Dosis', sans-serif;
+$stats-font-family: 'Myriad Pro';
+
+
+//placeholder
+%background{
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: auto;
+  width: 100%;
+}

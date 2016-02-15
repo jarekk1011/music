@@ -1,0 +1,19 @@
+.header{
+  height: 100vh;
+  &_background{
+    position: absolute;
+    bottom:0;
+    top:0;
+    left:0;
+    right:0;
+    background-image: url('../img/background.jpg');
+    @include background-size(cover);
+    background-repeat: no-repeat;
+    background-position: center center;
+    // background-attachment:fixed;
+    width:100%;
+    -webkit-transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+    z-index: -9;
+  }
+}

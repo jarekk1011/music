@@ -1,1 +1,5 @@
-@import "_mediaqueries.scss"
+@import "_mediaqueries.scss";
+
+.main-navigation-is-active{
+  border-bottom:2px solid #000;
+}

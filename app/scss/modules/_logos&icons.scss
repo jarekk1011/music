@@ -1,0 +1,19 @@
+.logo{
+  position: relative;
+  display: block;
+  margin: 0 auto;
+  padding-top: 13%;
+}
+.logo img{
+  max-width: 100%;
+  height: auto;
+}
+.social-icon{
+  padding-bottom: calculateRem(60px);
+}
+.social-icon:last-child{
+  padding-bottom: 0;
+}
+.social-icon-link{
+  padding: 5px;
+}

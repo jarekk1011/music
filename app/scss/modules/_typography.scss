@@ -1,6 +1,68 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:600,300,400);
 @import url(https://fonts.googleapis.com/css?family=Dosis);
 
-
-$primary-font-family: 'Dosis', sans-serif;
-$secoudary-font-family: 'Open Sans', sans-serif;
+//general typography
+h2,h6,.main-navigation{
+  text-transform: uppercase;
+}
+h2{
+  font-family: $dosis-font-family;
+  @include font-size(50px);
+  padding-bottom: calculateRem(55px);
+}
+h3,h4,h5,h6,p{
+  font-family:$primary-font-family;
+}
+.history h3{
+  text-transform: uppercase;
+}
+h4{
+  @include font-size(23px);
+}
+h6{
+  @include font-size(14px);
+  font-weight: bold;
+}
+p{
+  @include font-size(14px);
+  color:$gray;
+}
+// button
+.btn{
+  @include font-size(14px);
+  font-weight: bold;
+}
+//new typography
+.new__text{
+  // padding: calculateRem(35px);
+  padding: calculateRem(5px);
+}
+//slider
+.slider__text h5{
+	color: #fff;
+  font-family: $dosis-font-family;
+  @include font-size(18px);
+  text-transform: uppercase;
+}
+//latter typography
+.stats-text{
+  font-family: $stats-font-family;
+}
+.stats-list{
+  color: $gray;
+}
+//navigation typography
+.main-navigation__item a{
+  color:$gray;
+  font-family: $dosis-font-family;
+  @include font-size(17px);
+  padding:.125rem;
+}
+//form typography
+.contact__form input{
+  @include font-size(14px);
+  color:$black;
+}
+.contact__social a{
+  color: #000;
+}
