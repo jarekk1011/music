@@ -39,7 +39,7 @@ h1 {
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: auto;
+  height: 0;
   padding-bottom: 70%;
   width: 100%;
 }
@@ -49,7 +49,7 @@ h1 {
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: auto;
+  height: 0;
   padding-bottom: 70%;
   width: 100%;
 }
@@ -64,17 +64,32 @@ h1 {
   width: 100%;
 }
 
-.latter__compositions >.row {
-  background-color: $lightgray;
-  margin-bottom: calculateRem(55px);
+.latter__item > [class*="col-"] {
+  margin-bottom: -99999px;
+  padding-bottom: 99999px;
 }
 
 .latter__photo {
-  padding: 0;
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 0;
 }
 
-.latter_compositions__text {
-  padding: calculateRem(30px);
+.row {
+  overflow: hidden;
+}
+
+.latter__text {
+  padding: calculateRem(15px);
+  background-color: $lightgray;
+}
+
+.latter__item {
+  margin-bottom: 20px;
+}
+
+.latter__compositions {
+  padding-bottom: 5%;
 }
 //new
 .new {
@@ -98,8 +113,9 @@ h1 {
   width: 100%;
   height: 0;
   max-width: 100%;
+  min-height: 320px;
   margin: 0 auto;
-  padding-bottom: 100%;
+  padding-bottom: 90%;
 }
 
 .new_01 {

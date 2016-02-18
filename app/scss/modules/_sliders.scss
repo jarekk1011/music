@@ -1,8 +1,36 @@
+
 .slider__text {
   text-align: center;
-	// margin-top: -10%;
+}
+
+.slider__text h5,
+.slider__text p {
+  padding-bottom: calculateRem(15px);
+}
+
+.slider__text p {
+  padding-left: 15%;
+  padding-right: 15%;
+}
+
+.music-icon {
+  display: block;
+  margin: 0 auto;
+  padding-top: 12%;
+  padding-bottom: calculateRem(20px);
+}
+
+.slider__button {
   padding: 10% 0;
-	// margin:0 10%;
+}
+
+.right {
+  clear: both;
+  float: right;
+}
+
+.left {
+  @include transform(rotate(-180deg));
 }
 
 .history-slider-item {
@@ -31,9 +59,28 @@ $slick-opacity-not-active: 1 !default;
   margin-bottom: 30px;
 }
 
+.slick-slide {
+  outline: 0;
+}
+
+.history__slider h3 {
+  color: $slider-not;
+}
+
+.history__slider hr {
+  border-top: 1px solid $slider-not;
+}
+
+.slick-center h3 {
+  color: $darkGray;
+}
+
+.slick-center hr {
+  border-top: 1px solid $darkGray;
+}
+
 .slick-dots {
   position: absolute;
-	// bottom: -25px;
   list-style: none;
   display: block;
   text-align: center;

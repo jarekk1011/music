@@ -16,6 +16,7 @@ h2 {
   margin-bottom: calculateRem(55px);
   padding: 0 15px;
   white-space: nowrap;
+  color: $darkGray;
 }
 
 h2::before {
@@ -26,7 +27,7 @@ h2::before {
   left: 0;
   right: 0;
   height: 1px;
-  background: $black;
+  background: $darkGray;
 }
 
 .discography h2 {
@@ -104,23 +105,27 @@ h6 {
 //latter typography
 .stats-text {
   font-family: $stats-font-family;
-}
-
-.stats-item {
   font-size: calculateRem(12px);
 }
 
-.album-date {
-  margin-bottom: 15px;
+.song-date {
+  margin-bottom: 10px;
+  margin-top: 0;
   color: $coolgray;
+  font-weight: bold;
 }
 
 .song-title {
-  margin: calculateRem(35px) 0;
+  margin: calculateRem(20px) 0;
+}
+
+.album-title {
+  color: $white;
 }
 
 .stats-list {
   color: $gray;
+  margin: 0;
 }
 //navigation typography
 .main-navigation__item a {

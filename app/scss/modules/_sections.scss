@@ -30,17 +30,13 @@
 }
 
 .latter__stats {
-  padding-top: calculateRem(35px);
+  padding-top: calculateRem(15px);
+  padding-bottom: calculateRem(20px);
 }
 //slider
 .slider {
   @extend %background;
   background-image: url('../img/slider.jpg');
-
-  // padding-bottom: 20%;
-  .row {
-    margin: 0;
-  }
 }
 
 //upcoming
