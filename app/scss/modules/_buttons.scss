@@ -1,36 +1,60 @@
-.hell-button{
+.hell-button {
   background-image: url('../img/play_hell.jpg');
-  color: #fff;
+  color: $white;
 }
-.night-button, .smoke-button{
-    color: $black;
+
+.night-button,
+.smoke-button {
+  color: $black;
 }
-.night-button{
+
+.night-button {
   background-image: url('../img/play_night.jpg');
 }
-.smoke-button{
+
+.smoke-button {
   background-image: url('../img/play_smoke.png');
 }
 
-.discography__buttons{
-  display: block;
-  // margin:calculateRem(30px) auto 0 auto;    media!!!!!
-  margin:calculateRem(30px) 0 calculateRem(70px) 0;
-  border:0;
-  overflow: hidden;
-  background-repeat: no-repeat;
+.discography__buttons {
   background-position: center;
-  width: calculateRem(194px);
+  background-repeat: no-repeat;
+  border: 0;
+  display: block;
   height: calculateRem(53px);
+  // margin:calculateRem(30px) auto 0 auto;    media!!!!!
+  margin: calculateRem(30px) 0 calculateRem(70px);
+  overflow: hidden;
+  width: calculateRem(194px);
 }
-.slider__button{
-padding: 0;
-margin-top: 7%;
+
+.button {
+  border-radius: 0;
+  border: 1px solid $gray;
+  padding: calculateRem(20px) 0;
+  width: 17vw;
+  background: transparent;
 }
-.right{
-  float: right;
-  clear: both;
+
+@media screen and (max-width:767px) {
+  .button {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    width: 70vw;
   }
-.left{
+}
+
+.slider__button {
+  margin-top: 7%;
+  padding: 0;
+}
+
+.right {
+  clear: both;
+  float: right;
+}
+
+.left {
   @include transform(rotate(-180deg));
 }

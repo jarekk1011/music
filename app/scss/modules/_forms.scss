@@ -1,27 +1,32 @@
+input {
+  display: block;
+  border: 0;
+  width: 100%;
+  outline: 0;
+  background-color: transparent;
+}
 
-input{
-	display: block;
-	border:0;
-	width: 100%;
-	outline: 0;
-	background-color: rgba(0,0,0,0.0);
+.contact__form p {
+  padding-bottom: calculateRem(35px);
+  border: 0;
 }
-.contact__form p{
-	padding-bottom: calculateRem(35px);
-	border:0;
+
+.submit {
+  font-weight: 600;
 }
-.submit{
-	font-weight: 600;
+
+%border {
+  border-bottom: 1px solid $black;
 }
-%border{
-	border-bottom: 1px solid $black;
+
+.name input {
+  @extend %border;
 }
-.name input{
-	@extend %border;
+
+.email input {
+  @extend %border;
 }
-.email input{
-	@extend %border;
-}
-.message input{
-	@extend %border;
+
+.message input {
+  @extend %border;
 }

@@ -1,9 +1,12 @@
-/* Font Colors */
-$gray:#999;
-$black:#000;
-$opacity:rgba(0,0,0,0.7);
+//Font Colors
+$gray: #999;
+$black: #000;
+$opacity: rgba(0, 0, 0, .7);
+$white: #fff;
+$lightgray: #f5f6f6;
+$coolgray: #7b7c7c;
 
-/* Background Colors */
+//Background Colors
 
 
 $primary-font-family: 'Open Sans', sans-serif;
@@ -12,10 +15,10 @@ $stats-font-family: 'Myriad Pro';
 
 
 //placeholder
-%background{
-  background-size: cover;
-  background-repeat: no-repeat;
+%background {
   background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
   height: auto;
   width: 100%;
 }

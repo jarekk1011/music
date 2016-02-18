@@ -1,19 +1,27 @@
-.logo{
-  position: relative;
+.logo {
   display: block;
   margin: 0 auto;
   padding-top: 13%;
+  position: relative;
 }
-.logo img{
-  max-width: 100%;
+
+h1 img {
   height: auto;
+  max-width: 100%;
 }
-.social-icon{
+
+.social-icon {
   padding-bottom: calculateRem(60px);
 }
-.social-icon:last-child{
+
+.stats {
+  padding-top: calculateRem(35px);
+}
+
+.social-icon:last-child {
   padding-bottom: 0;
 }
-.social-icon-link{
+
+.social-icon-link {
   padding: 5px;
 }

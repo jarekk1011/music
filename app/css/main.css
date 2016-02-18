@@ -1,19 +1,10 @@
 @charset "UTF-8";
-/*
-    Basic Music Web Templemate
-    Author: Jaroslaw Kuca
-*/
-/*____________BASE________________
-variables, mixins
-*/
-/* Font Colors */
-/* Background Colors */
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:600,300,400);
 @import url(https://fonts.googleapis.com/css?family=Dosis);
 .concert, .slider, .upcoming, .history, .contact {
-  background-size: cover;
-  background-repeat: no-repeat;
   background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
   height: auto;
   width: 100%;
 }
@@ -23,7 +14,8 @@ variables, mixins
   padding: 0;
 }
 
-html, body {
+html,
+body {
   font-size: 100%;
 }
 
@@ -35,15 +27,104 @@ ul {
   list-style: none;
 }
 
-/*____________MODULES_______________
-site components
-*/
+/* Slider */
+.slick-slider {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -ms-touch-action: pan-y;
+  touch-action: pan-y;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.slick-list {
+  position: relative;
+  overflow: hidden;
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+.slick-list:focus {
+  outline: none;
+}
+.slick-list.dragging {
+  cursor: pointer;
+  cursor: hand;
+}
+
+.slick-slider .slick-track,
+.slick-slider .slick-list {
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+.slick-track {
+  position: relative;
+  left: 0;
+  top: 0;
+  display: block;
+}
+.slick-track:before, .slick-track:after {
+  content: "";
+  display: table;
+}
+.slick-track:after {
+  clear: both;
+}
+.slick-loading .slick-track {
+  visibility: hidden;
+}
+
+.slick-slide {
+  float: left;
+  height: 100%;
+  min-height: 1px;
+  display: none;
+}
+[dir="rtl"] .slick-slide {
+  float: right;
+}
+.slick-slide img {
+  display: block;
+}
+.slick-slide.slick-loading img {
+  display: none;
+}
+.slick-slide.dragging img {
+  pointer-events: none;
+}
+.slick-initialized .slick-slide {
+  display: block;
+}
+.slick-loading .slick-slide {
+  visibility: hidden;
+}
+.slick-vertical .slick-slide {
+  display: block;
+  height: auto;
+  border: 1px solid transparent;
+}
+
+.slick-arrow.slick-hidden {
+  display: none;
+}
+
 .hell-button {
   background-image: url("../img/play_hell.jpg");
   color: #fff;
 }
 
-.night-button, .smoke-button {
+.night-button,
+.smoke-button {
   color: #000;
 }
 
@@ -56,24 +137,40 @@ site components
 }
 
 .discography__buttons {
-  display: block;
-  margin: 1.875rem 0 4.375rem 0;
-  border: 0;
-  overflow: hidden;
-  background-repeat: no-repeat;
   background-position: center;
-  width: 12.125rem;
+  background-repeat: no-repeat;
+  border: 0;
+  display: block;
   height: 3.3125rem;
+  margin: 1.875rem 0 4.375rem;
+  overflow: hidden;
+  width: 12.125rem;
 }
 
+.button {
+  border-radius: 0;
+  border: 1px solid #999;
+  padding: 1.25rem 0;
+  width: 17vw;
+  background: transparent;
+}
+
+@media screen and (max-width: 767px) {
+  .button {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    width: 70vw;
+  }
+}
 .slider__button {
-  padding: 0;
   margin-top: 7%;
+  padding: 0;
 }
 
 .right {
-  float: right;
   clear: both;
+  float: right;
 }
 
 .left {
@@ -84,15 +181,17 @@ site components
 }
 
 h1 {
-  text-align: center;
   padding-top: 10rem;
+  text-align: center;
 }
 
-.concert hr, .latter hr, .new hr, .upcoming hr {
+.concert hr,
+.latter hr, .new hr, .upcoming hr {
   margin: 0;
 }
 
-.concert hr, .latter hr {
+.concert hr,
+.latter hr {
   width: 60%;
 }
 
@@ -110,38 +209,38 @@ h1 {
 
 .history__slider hr {
   display: inline-block;
-  width: 15%;
   margin-bottom: 10px;
+  width: 15%;
 }
 
 .latter__indian-album {
   background-image: url("../img/indian_album.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
   background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
   height: auto;
-  width: 100%;
   padding-bottom: 70%;
+  width: 100%;
 }
 
 .latter__indian-album-r {
   background-image: url("../img/indian_album_r.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
   background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
   height: auto;
-  width: 100%;
   padding-bottom: 70%;
+  width: 100%;
 }
 
 .latter__chill-album {
   background-image: url("../img/chill_album.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
   background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
   height: auto;
-  width: 100%;
   padding-bottom: 70%;
+  width: 100%;
 }
 
 .latter__compositions > .row {
@@ -153,14 +252,18 @@ h1 {
   padding: 0;
 }
 
+.latter_compositions__text {
+  padding: 1.875rem;
+}
+
 .new {
   display: block;
   margin: 0 auto;
 }
 
 .new__list {
-  margin-top: 12%;
   margin-bottom: 10%;
+  margin-top: 12%;
 }
 
 .new__list li {
@@ -203,10 +306,10 @@ h1 {
 }
 
 .vertical-line-short, .vertical-line-long {
-  display: block;
-  width: 1px;
-  margin-left: 2.1875rem;
   background-color: #000;
+  display: block;
+  margin-left: 2.1875rem;
+  width: 1px;
 }
 
 .vertical-line-short {
@@ -238,7 +341,10 @@ input {
   border-bottom: 1px solid #000;
 }
 
-.discography__heading, .concert__heading, .latter__heading, .history__heading {
+.discography__heading,
+.concert__heading,
+.latter__heading,
+.history__heading {
   padding-top: 5%;
   padding-bottom: 5%;
   text-align: center;
@@ -260,6 +366,14 @@ input {
   padding-top: 20%;
 }
 
+.concert__list__description {
+  padding-bottom: 2.1875rem;
+}
+
+.latter__stats {
+  padding-top: 2.1875rem;
+}
+
 .slider {
   background-image: url("../img/slider.jpg");
 }
@@ -277,19 +391,75 @@ input {
   padding-bottom: 40%;
 }
 
-h2, h6, .main-navigation {
+h2,
+h6,
+.main-navigation {
   text-transform: uppercase;
 }
 
 h2 {
-  font-family: "Dosis", sans-serif;
   font-size: 50px;
   font-size: 3.125rem;
-  padding-bottom: 3.4375rem;
+  display: inline-block;
+  position: relative;
+  font-family: "Dosis", sans-serif;
+  margin-bottom: 3.4375rem;
+  padding: 0 15px;
+  white-space: nowrap;
 }
 
-h3, h4, h5, h6, p {
+h2::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: #000;
+}
+
+.discography h2 {
+  color: #9c7051;
+  text-fill-color: #9c7051;
+  background: -webkit-linear-gradient(0deg, #9c7051, #8d7274);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background: -moz-linear-gradient(transparent, transparent);
+  background: -o-linear-gradient(transparent, transparent);
+  -moz-text-fill-color: transparent;
+  -o-text-fill-color: transparent;
+}
+
+.concert h2 {
+  color: #62a2ad;
+  text-fill-color: #62a2ad;
+  background: -webkit-linear-gradient(270deg, #62a2ad, #8dbab3);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background: -moz-linear-gradient(transparent, transparent);
+  background: -o-linear-gradient(transparent, transparent);
+  -moz-text-fill-color: transparent;
+  -o-text-fill-color: transparent;
+}
+
+.upcoming {
+  color: #42717e;
+}
+
+h3,
+h4,
+h5,
+h6,
+p {
   font-family: "Open Sans", sans-serif;
+  color: #000;
+}
+
+p {
+  font-size: 14px;
+  font-size: 0.875rem;
+  color: #999;
 }
 
 .history h3 {
@@ -307,16 +477,11 @@ h6 {
   font-weight: bold;
 }
 
-p {
-  font-size: 14px;
-  font-size: 0.875rem;
-  color: #999;
-}
-
 .btn {
   font-size: 14px;
   font-size: 0.875rem;
   font-weight: bold;
+  font-family: "Open Sans", sans-serif;
 }
 
 .new__text {
@@ -324,10 +489,10 @@ p {
 }
 
 .slider__text h5 {
-  color: #fff;
-  font-family: "Dosis", sans-serif;
   font-size: 18px;
   font-size: 1.125rem;
+  color: #fff;
+  font-family: "Dosis", sans-serif;
   text-transform: uppercase;
 }
 
@@ -335,16 +500,29 @@ p {
   font-family: "Myriad Pro";
 }
 
+.stats-item {
+  font-size: 0.75rem;
+}
+
+.album-date {
+  margin-bottom: 15px;
+  color: #7b7c7c;
+}
+
+.song-title {
+  margin: 2.1875rem 0;
+}
+
 .stats-list {
   color: #999;
 }
 
 .main-navigation__item a {
-  color: #999;
-  font-family: "Dosis", sans-serif;
   font-size: 17px;
   font-size: 1.0625rem;
-  padding: .125rem;
+  color: #999;
+  font-family: "Dosis", sans-serif;
+  padding: 0.125rem;
 }
 
 .contact__form input {
@@ -358,19 +536,23 @@ p {
 }
 
 .logo {
-  position: relative;
   display: block;
   margin: 0 auto;
   padding-top: 13%;
+  position: relative;
 }
 
-.logo img {
-  max-width: 100%;
+h1 img {
   height: auto;
+  max-width: 100%;
 }
 
 .social-icon {
   padding-bottom: 3.75rem;
+}
+
+.stats {
+  padding-top: 2.1875rem;
 }
 
 .social-icon:last-child {
@@ -431,19 +613,19 @@ p {
   height: 20px;
   width: 20px;
   outline: none;
-  line-height: 0px;
-  font-size: 0px;
+  line-height: 0;
+  font-size: 0;
   padding: 5px;
   cursor: pointer;
 }
-.slick-dots li button:before {
+.slick-dots li button::before {
   position: absolute;
   top: 0;
   left: 0;
   content: "";
   width: 20px;
   height: 20px;
-  font-family: "FontAwesome";
+  font-family: 'FontAwesome';
   font-size: 10px;
   line-height: 20px;
   text-align: center;
@@ -452,35 +634,30 @@ p {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-.slick-dots li.slick-active button:before {
-  content: "\f1db";
-  font-family: "FontAwesome";
+.slick-dots li.slick-active button::before {
+  content: '\f1db';
+  font-family: 'FontAwesome';
   color: #fff;
   opacity: 0.75;
 }
 
-/*____________LAYOUTS_______________
-layout styles
-*/
 .header {
   height: 100vh;
 }
 .header_background {
-  position: absolute;
-  bottom: 0;
-  top: 0;
-  left: 0;
-  right: 0;
-  background-image: url("../img/background.jpg");
   -moz-background-size: cover;
   -o-background-size: cover;
   -webkit-background-size: cover;
   background-size: cover;
-  background-repeat: no-repeat;
+  background-image: url("../img/background.jpg");
   background-position: center center;
+  background-repeat: no-repeat;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
   width: 100%;
-  -webkit-transform: translateZ(0);
-  -webkit-backface-visibility: hidden;
   z-index: -9;
 }
 
@@ -491,16 +668,13 @@ layout styles
   background-color: rgba(0, 0, 0, 0.7);
   float: none;
   z-index: 999;
-  -webkit-box-shadow: 0px 3px 25px 0px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 0px 3px 25px 0px rgba(0, 0, 0, 0.75);
-  box-shadow: 0px 3px 25px 0px rgba(0, 0, 0, 0.75);
 }
 .main-navigation__list {
-  margin: 0px;
+  margin: 0;
 }
 .main-navigation__item {
-  padding: 1rem;
   height: 3.75rem;
+  padding: 1rem;
 }
 
 .contact__heading {
@@ -530,12 +704,18 @@ layout styles
   border-left: 1px solid #000;
 }
 
-/*____________LAYOUTS_______________
-layout styles
-*/
 @media screen and (max-width: 970px) {
   .slider__navigation {
     display: none;
+  }
+
+  h2 {
+    font-size: 1.875rem;
+  }
+
+  .discography__buttons {
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 .main-navigation-is-active {

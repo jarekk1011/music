@@ -1,129 +1,150 @@
 //page logo
-h1{
-  text-align: center;
+h1 {
   padding-top: 10rem;
+  text-align: center;
 }
 //hr
-%hr{
+%hr {
   margin: 0;
 }
-.concert hr, .latter hr{
+
+.concert hr,
+.latter hr {
+  @extend %hr;
   width: 60%;
-  @extend %hr;
 }
-.new hr{
+
+.new hr {
+  @extend %hr;
   width: 90%;
-  @extend %hr;
 }
-.upcoming hr{
+
+.upcoming hr {
+  @extend %hr;
   width: 23%;
-  @extend %hr;
 }
-.discography hr{
-  margin:0;
+
+.discography hr {
+  margin: 0;
 }
+
 .history__slider hr {
-  display:inline-block;
-  width: 15%;
+  display: inline-block;
   margin-bottom: 10px;
+  width: 15%;
 }
 //latter
-.latter__indian-album{
+.latter__indian-album {
   background-image: url('../img/indian_album.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
   background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
   height: auto;
-  width: 100%;
   padding-bottom: 70%;
+  width: 100%;
 }
-.latter__indian-album-r{
+
+.latter__indian-album-r {
   background-image: url('../img/indian_album_r.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
   background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
   height: auto;
-  width: 100%;
   padding-bottom: 70%;
+  width: 100%;
 }
-.latter__chill-album{
+
+.latter__chill-album {
   background-image: url('../img/chill_album.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
   background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
   height: auto;
-  width: 100%;
   padding-bottom: 70%;
+  width: 100%;
 }
-.latter__compositions >.row{
-  background-color: #f5f6f6;
+
+.latter__compositions >.row {
+  background-color: $lightgray;
   margin-bottom: calculateRem(55px);
 }
-.latter__photo{
+
+.latter__photo {
   padding: 0;
 }
-.latter__stats{
-  // padding-top:calculateRem(55px);
+
+.latter_compositions__text {
+  padding: calculateRem(30px);
 }
 //new
-.new{
+.new {
   display: block;
   margin: 0 auto;
 }
-.new__list{
-  margin-top: 12%;
+
+.new__list {
   margin-bottom: 10%;
+  margin-top: 12%;
 }
-.new__list li{
+
+.new__list li {
   margin-bottom: calculateRem(30px);
 }
-%new{
+
+%new {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: right bottom;
   width: 100%;
   height: 0;
   max-width: 100%;
-  margin:0 auto;
+  margin: 0 auto;
   padding-bottom: 100%;
 }
-.new_01{
-  background-image: url('../img/new_01.jpg');
-  @extend %new;
-}
-.new_02{
-  background-image: url('../img/new_02.jpg');
-  @extend %new;
-}
-.new_03{
-  background-image: url('../img/new_03.jpg');
-  @extend %new;
-}
-.new_04{
-  background-image: url('../img/new_04.jpg');
-  @extend %new;
-}
-.new_05{
-  background-image: url('../img/new_05.jpg');
-  @extend %new;
 
-}
-.new_06{
-  background-image: url('../img/new_06.jpg');
+.new_01 {
   @extend %new;
+  background-image: url('../img/new_01.jpg');
 }
-%line{
-  display: block;
-  width: 1px;
-  margin-left: calculateRem(35px);
+
+.new_02 {
+  @extend %new;
+  background-image: url('../img/new_02.jpg');
+}
+
+.new_03 {
+  @extend %new;
+  background-image: url('../img/new_03.jpg');
+}
+
+.new_04 {
+  @extend %new;
+  background-image: url('../img/new_04.jpg');
+}
+
+.new_05 {
+  @extend %new;
+  background-image: url('../img/new_05.jpg');
+}
+
+.new_06 {
+  @extend %new;
+  background-image: url('../img/new_06.jpg');
+}
+
+%line {
   background-color: $black;
+  display: block;
+  margin-left: calculateRem(35px);
+  width: 1px;
 }
 //upcoming
-.vertical-line-short{
+.vertical-line-short {
+  @extend %line;
   height: calculateRem(50px);
-  @extend %line;
 }
-.vertical-line-long{
-  height: calculateRem(165px);
+
+.vertical-line-long {
   @extend %line;
+  height: calculateRem(165px);
 }

@@ -1,32 +1,11 @@
 //rem mixin with pixel fallback
 
 @function calculateRem($size) {
-  $remSize: $size / 16px;
-  @return $remSize * 1rem;
+  $rem-size: $size / 16px;
+  @return $rem-size * 1rem;
 }
 
 @mixin font-size($size) {
   font-size: $size;
   font-size: calculateRem($size);
-}
-
-//transition mixin
-
-@mixin transition($args...) {
-  -webkit-transition: $args;
-  -moz-transition: $args;
-  -ms-transition: $args;
-  -o-transition: $args;
-  transition: $args;
-}
-//hide element placeholder
-%visuallyhidden {
-  margin: -1px;
-  padding: 0;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-  clip: rect(0 0 0 0);
-  clip: rect(0, 0, 0, 0);
-  position: absolute;
 }

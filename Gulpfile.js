@@ -9,7 +9,8 @@ var gulp = require('gulp'),
     notify = require('gulp-notify'),
     plumber = require('gulp-plumber'),
     compass = require('gulp-compass'),
-    gutil = require('gulp-util');
+    gutil = require('gulp-util'),
+    gzip = require('gulp-gzip');
 
 //Error Handler
 var onError = function(error) {
@@ -29,8 +30,6 @@ gulp.task('browser', function () {
     }
   });
 });
-
-
 //Clean dist/
 gulp.task('clean:dist', function() {
   return del.sync('dist');
@@ -40,7 +39,8 @@ gulp.task('images', function(){
   gulp.src('app/img/**/*.+(png|jpg|jpeg|gif|svg)')
     // Caching images that ran through imagemin
     .pipe(cache(imagemin({
-        interlaced: true
+        interlaced: true,
+        progressive: true
       })))
     .pipe(gulp.dest('dist/img'))
     .pipe(reload({stream:true}));

@@ -1,5 +1,12 @@
-@media screen and (max-width:970px){
-	.slider__navigation{
-		display: none;
+@media screen and (max-width:970px) {
+  .slider__navigation {
+    display: none;
+}
+  h2 {
+    font-size: calculateRem(30px);
+}
+  .discography__buttons{
+    margin-left: auto;
+    margin-right: auto;
 	}
 }
