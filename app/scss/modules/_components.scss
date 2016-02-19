@@ -22,6 +22,7 @@ h1 {
 .upcoming hr {
   @extend %hr;
   width: 23%;
+  margin-bottom: 10px;
 }
 
 .discography hr {
@@ -98,12 +99,23 @@ h1 {
 }
 
 .new__list {
-  margin-bottom: 10%;
   margin-top: 12%;
 }
 
 .new__list li {
   margin-bottom: calculateRem(30px);
+}
+
+.new-img {
+  padding: calculateRem(20px);
+
+  .album-title {
+    padding-bottom: calculateRem(20px);
+  }
+
+  h4 {
+    padding-bottom: calculateRem(20px);
+  }
 }
 
 %new {

@@ -3,8 +3,7 @@
 
 //general typography
 h2,
-h6,
-.main-navigation {
+h6 {
   text-transform: uppercase;
 }
 
@@ -126,13 +125,6 @@ h6 {
 .stats-list {
   color: $gray;
   margin: 0;
-}
-//navigation typography
-.main-navigation__item a {
-  @include font-size(17px);
-  color: $gray;
-  font-family: $dosis-font-family;
-  padding: 0.125rem;
 }
 //form typography
 .contact__form input {

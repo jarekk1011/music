@@ -1,18 +1,41 @@
-.main-navigation {
-  visibility: hidden;
-  position: fixed;
-  top: 0;
-  background-color: $opacity;
+.navbar {
+  border-bottom: 0;
+  background-color: $transparent;
+
+}
+
+.nav {
+  @include font-size(17px);
+  font-family: $dosis-font-family;
+  font-weight: normal;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: calculateRem(5px);
+  display: inline-block;
   float: none;
-  z-index: 999;
+}
 
-  &__list {
-    margin: 0;
+.main__navigation {
+  .nav-item-active-js {
+    border-bottom: 2px solid $navGray;
   }
+}
 
-  &__item {
-    height: calculateRem(60px);
-    padding: 1rem;
+.navbar-default .navbar-nav > li > a {
+  color: $navGray;
+  outline: 0;
+}
 
-  }
+.navigation {
+  @include transition(all 0.5s ease-in-out);
+  background-color: $transparentNav;
+}
+
+.navbar-default .navbar-nav > li > a:focus,
+.navbar-default .navbar-nav > li > a:hover {
+  color: $navGray;
+}
+
+.navbar-toggle {
+  border-radius: 0;
 }

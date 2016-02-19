@@ -16,32 +16,42 @@
 </head>
 
 <body>
-	<header class="header">
+	<header id="js-header" class="header">
 		<div class="container-fluid">
-			<div class="row">
-				<nav class="main-navigation col-md-12">
-					<ul class="main-navigation__list list-inline text-center">
-						<li class="main-navigation__item"><a class="main-navigation-is-active" href="">about</a></li>
-						<li class="main-navigation__item"><a href="">discography</a></li>
-						<li class="main-navigation__item"><a href="">concert tours</a></li>
-						<li class="main-navigation__item"><a href="">latter compositions</a></li>
-						<li class="main-navigation__item"><a href="">new tracks</a></li>
-						<li class="main-navigation__item"><a href="">upcoming events</a></li>
-						<li class="main-navigation__item"><a href="">history</a></li>
-						<li class="main-navigation__item"><a href="">contact</a></li>
-					</ul>
-				</nav>
-			</div>
+			<nav id="js-nav" class="navbar navbar-default navbar-fixed-top text-center" role="navigation">
+				<div class="container-fluid">
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+					</div>
+					<div class="collapse navbar-collapse">
+						<ul class="nav navbar-nav main__navigation">
+							<li><a class="nav-item-active-js" href="#js-header">about</a></li>
+							<li><a href="#js-discography">discography</a></li>
+							<li><a href="#js-concert">concert tours</a></li>
+							<li><a href="#js-latter">latter compositions</a></li>
+							<li><a href="#js-new">new tracks</a></li>
+							<li><a href="#js-upcoming">upcoming events</a></li>
+							<li><a href="#js-history">history</a></li>
+							<li><a href="#js-contact">contact</a></li>
+						</ul>
+					</div>
+				</div>
+			</nav>
 			<h1 class="logo">
-		            <a href="index.html">
-		                <img src="img/logo.png" alt="John Doe Productions" />
-		            </a>
-		          </h1>
+		    <a href="index.html">
+	        <img src="img/logo.png" alt="John Doe Productions" />
+        </a>
+		  </h1>
 		</div>
 		<div class="header_background"></div>
 	</header>
 	<!-- end of header -->
-	<section class="discography">
+	<section id="js-discography" class="discography">
 		<div class="container">
 			<!-- discography header -->
 			<div class="discography__heading row text-center">
@@ -104,7 +114,7 @@
 		</div>
 	</section>
 	<!-- end of discography -->
-	<section class="concert">
+	<section id="js-concert" class="concert">
 		<div class="container">
 			<div class="concert__heading text-center">
 				<h2>concert tours</h2>
@@ -140,7 +150,7 @@
 		<!-- <img class="concert__background" src="/img/concert_background.jpg" alt="" /> -->
 	</section>
 	<!-- end of concert -->
-	<section class="latter">
+	<section id="js-latter" class="latter">
 		<div class="container">
 			<div class="latter__heading">
 				<h2>latter compositions</h2>
@@ -151,30 +161,30 @@
 			<ul class="latter__compositions">
 				<li class="latter__item row">
 					<div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-0 latter__text">
-							<div>
-								<h6 class="song-date">03.04.2015</h6>
-								<hr />
-								<h6>indian summer</h6>
+						<div>
+							<h6 class="song-date">03.04.2015</h6>
+							<hr />
+							<h6>indian summer</h6>
+						</div>
+						<div>
+							<h4 class="song-title">Sam Feldt ft. Kimberly Anne - Show Me Love (EDX's Indian Summer Remix)</h4>
+							<p>
+								"Radioactive" is a song recorded by American rock band Imagine Dragons for their major-label debut EP Continued Silence and later on their debut studio album, Night Visions (2012), as the opening track.
+							</p>
+						</div>
+						<div class="row latter__stats">
+							<div class="col-xs-12 col-sm-6">
+								<button type="button" class="btn button">Visit the iTunes &nbsp; <i class="fa fa-angle-right"></i></button>
 							</div>
-							<div>
-								<h4 class="song-title">Sam Feldt ft. Kimberly Anne - Show Me Love (EDX's Indian Summer Remix)</h4>
-								<p>
-									"Radioactive" is a song recorded by American rock band Imagine Dragons for their major-label debut EP Continued Silence and later on their debut studio album, Night Visions (2012), as the opening track.
-								</p>
+							<div class="stats col-xs-12 col-sm-6 text-center">
+								<ul class="stats-list list-inline">
+									<li class="stats-item" title="182,364 plays"><i class="fa fa-volume-down"></i>&nbsp;<span class="stats-text">182,364</span></li>
+									<li class="stats-item" title="10,723 likes"><i class="fa fa-heart"></i>&nbsp;<span class="stats-text">10 k</span></li>
+									<li class="stats-item" title="3,435 shares"><i class="fa fa-share-square-o"></i>&nbsp;<span class="stats-text">3 k</span></li>
+									<li class="stats-item" title="96 comments"><i class="fa fa-comment"></i>&nbsp;<span class="stats-text">96</span></li>
+								</ul>
 							</div>
-							<div class="row latter__stats">
-								<div class="col-xs-12 col-sm-6">
-									<button type="button" class="btn button">Visit the iTunes &nbsp; <i class="fa fa-angle-right"></i></button>
-								</div>
-								<div class="stats col-xs-12 col-sm-6 text-center">
-									<ul class="stats-list list-inline">
-										<li class="stats-item" title="182,364 plays"><i class="fa fa-volume-down"></i>&nbsp;<span class="stats-text">182,364</span></li>
-										<li class="stats-item" title="10,723 likes"><i class="fa fa-heart"></i>&nbsp;<span class="stats-text">10 k</span></li>
-										<li class="stats-item" title="3,435 shares"><i class="fa fa-share-square-o"></i>&nbsp;<span class="stats-text">3 k</span></li>
-										<li class="stats-item" title="96 comments"><i class="fa fa-comment"></i>&nbsp;<span class="stats-text">96</span></li>
-									</ul>
-								</div>
-							</div>
+						</div>
 					</div>
 					<div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-0 latter__photo">
 						<div class="latter__indian-album">
@@ -185,31 +195,31 @@
 
 				<li class="latter__item row">
 					<div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-0 col-md-push-6 latter__text">
-						  <div>
-						    <h6 class="song-date">20.07.2015</h6>
-						    <hr />
-						    <h6>indian summer remix</h6>
-						  </div>
-						  <div>
-						    <h4 class="song-title">Sam Feldt - Show Me Love (EDX's Indian Summer Remix)</h4>
-						    <p>
-						      Amsterdam's Sam Feldt earned attention in Europe and then worldwide for his melodic house remixes, mixtapes, and collaborations including 2014's "Bloesem" with De Hofnar and "Hot Skin" with Kav Verhouzer on... </p>
-						  </div>
-						  <div class="row latter__stats">
-						    <div class="col-xs-12 col-sm-6">
-						      <button type="button" class="btn button">Visit the iTunes &nbsp; <i class="fa fa-angle-right"></i></button>
-						    </div>
-						    <div class="stats col-xs-12 col-sm-6 text-center">
-						      <ul class="stats-list list-inline">
-						        <li class="stats-item" title="12,289 plays"><i class="fa fa-volume-down"></i>&nbsp;<span class="stats-text">12,289</span></li>
-						        <li class="stats-item" title="8,629 likes"><i class="fa fa-heart"></i>&nbsp;<span class="stats-text">8 k</span></li>
-						        <li class="stats-item" title="1,343 shares"><i class="fa fa-share-square-o"></i>&nbsp;<span class="stats-text">1 k</span></li>
-						        <li class="stats-item" title="23 comments"><i class="fa fa-comment"></i>&nbsp;<span class="stats-text">23</span></li>
-						      </ul>
-						    </div>
-						  </div>
+						<div>
+							<h6 class="song-date">20.07.2015</h6>
+							<hr />
+							<h6>indian summer remix</h6>
+						</div>
+						<div>
+							<h4 class="song-title">Sam Feldt - Show Me Love (EDX's Indian Summer Remix)</h4>
+							<p>
+								Amsterdam's Sam Feldt earned attention in Europe and then worldwide for his melodic house remixes, mixtapes, and collaborations including 2014's "Bloesem" with De Hofnar and "Hot Skin" with Kav Verhouzer on... </p>
+						</div>
+						<div class="row latter__stats">
+							<div class="col-xs-12 col-sm-6">
+								<button type="button" class="btn button">Visit the iTunes &nbsp; <i class="fa fa-angle-right"></i></button>
+							</div>
+							<div class="stats col-xs-12 col-sm-6 text-center">
+								<ul class="stats-list list-inline">
+									<li class="stats-item" title="12,289 plays"><i class="fa fa-volume-down"></i>&nbsp;<span class="stats-text">12,289</span></li>
+									<li class="stats-item" title="8,629 likes"><i class="fa fa-heart"></i>&nbsp;<span class="stats-text">8 k</span></li>
+									<li class="stats-item" title="1,343 shares"><i class="fa fa-share-square-o"></i>&nbsp;<span class="stats-text">1 k</span></li>
+									<li class="stats-item" title="23 comments"><i class="fa fa-comment"></i>&nbsp;<span class="stats-text">23</span></li>
+								</ul>
+							</div>
+						</div>
 					</div>
-          <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-0 col-md-pull-6 latter__photo">
+					<div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-0 col-md-pull-6 latter__photo">
 						<div class="latter__indian-album-r">
 							<audio></audio>
 						</div>
@@ -217,30 +227,30 @@
 				</li>
 				<li class="latter__item row">
 					<div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-0 latter__text">
-						  <div>
-						    <h6 class="song-date">03.04.2015</h6>
-						    <hr />
-						    <h6>chill nation</h6>
-						  </div>
-						  <div>
-						    <h4 class="song-title">James Bay Let It Go (Bearson Remix)</h4>
-						    <p>
-						      A soulful singer/songwriter from a small English town with a penchant for crafting moving and evocative folk-pop confections in the vein of Ed Sheeran, Foy Vance, and Ben Howard, James Bay hails from the North Hertf...
-						    </p>
-						  </div>
-						  <div class="row latter__stats">
-						    <div class="col-xs-12 col-sm-6">
-						      <button type="button" class="btn button">Visit the iTunes &nbsp; <i class="fa fa-angle-right"></i></button>
-						    </div>
-						    <div class="stats col-xs-12 col-sm-6 text-center">
-						      <ul class="stats-list list-inline">
-						        <li class="stats-item" title="12,289 plays"><i class="fa fa-volume-down"></i>&nbsp;<span class="stats-text">12,289</span></li>
-						        <li class="stats-item" title="8,325 likes"><i class="fa fa-heart"></i>&nbsp;<span class="stats-text">8 k</span></li>
-						        <li class="stats-item" title="1,432 shares"><i class="fa fa-share-square-o"></i>&nbsp;<span class="stats-text">1 k</span></li>
-						        <li class="stats-item" title="23 comments"><i class="fa fa-comment"></i>&nbsp;<span class="stats-text">23</span></li>
-						      </ul>
-						    </div>
-						  </div>
+						<div>
+							<h6 class="song-date">03.04.2015</h6>
+							<hr />
+							<h6>chill nation</h6>
+						</div>
+						<div>
+							<h4 class="song-title">James Bay Let It Go (Bearson Remix)</h4>
+							<p>
+								A soulful singer/songwriter from a small English town with a penchant for crafting moving and evocative folk-pop confections in the vein of Ed Sheeran, Foy Vance, and Ben Howard, James Bay hails from the North Hertf...
+							</p>
+						</div>
+						<div class="row latter__stats">
+							<div class="col-xs-12 col-sm-6">
+								<button type="button" class="btn button">Visit the iTunes &nbsp; <i class="fa fa-angle-right"></i></button>
+							</div>
+							<div class="stats col-xs-12 col-sm-6 text-center">
+								<ul class="stats-list list-inline">
+									<li class="stats-item" title="12,289 plays"><i class="fa fa-volume-down"></i>&nbsp;<span class="stats-text">12,289</span></li>
+									<li class="stats-item" title="8,325 likes"><i class="fa fa-heart"></i>&nbsp;<span class="stats-text">8 k</span></li>
+									<li class="stats-item" title="1,432 shares"><i class="fa fa-share-square-o"></i>&nbsp;<span class="stats-text">1 k</span></li>
+									<li class="stats-item" title="23 comments"><i class="fa fa-comment"></i>&nbsp;<span class="stats-text">23</span></li>
+								</ul>
+							</div>
+						</div>
 					</div>
 					<div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-0 latter__photo">
 						<div class="latter__chill-album">
@@ -259,7 +269,7 @@
 					<img class="left" src="img/arrow_button.png" alt="Next Button" />
 				</div>
 				<div class="col-md-8">
-          <img class="music-icon" src="img/music-icon.png" alt="music icon" />
+					<img class="music-icon" src="img/music-icon.png" alt="music icon" />
 					<div class="slider__text">
 						<!-- 1 -->
 						<div>
@@ -301,7 +311,7 @@
 		</div>
 	</section>
 	<!-- end of slider -->
-	<section class="new">
+	<section id="js-new" class="new">
 		<div class="container">
 			<ul class="new__list row">
 				<li class="col-xs-12 col-sm-6 col-md-4">
@@ -388,7 +398,7 @@
 		</div>
 	</section>
 	<!-- end of new -->
-	<section class="upcoming">
+	<section id="js-upcoming" class="upcoming">
 		<div class="container">
 			<div class="row">
 				<div class="col-xs-12 col-md-6 col-md-offset-6">
@@ -419,90 +429,90 @@
 		</div>
 	</section>
 	<!-- end of upcoming -->
-	<section class="history">
-<div class="history-items">
-  <div class="container">
-    <div class="history__heading">
-      <h2>history</h2>
-      <p>
-        In 2008, lead singer Dan Reynolds met drummer Andrew Tolman at Brigham Young University where they were both students.Tolman recruited longtime high school friend Daniel Wayne "Wing" Sermon, who had graduated from Berklee College of Music
-      </p>
-    </div>
-  </div>
-  <div class="history__slider">
-    <div class="history-slider-item">
-      <hr />
-      <h3>feb 3</h3>
-      <hr />
-    </div>
-    <div class="history-slider-item">
-      <hr />
-      <h3>feb 18</h3>
-      <hr />
-    </div>
-    <div class="history-slider-item">
-      <hr />
-      <h3>mar 1</h3>
-      <hr />
-    </div>
-    <div class="history-slider-item">
-      <hr>
-      <h3>mar 16</h3>
-      <hr />
-    </div>
+	<section id="js-history" class="history">
+		<div class="history-items">
+			<div class="container">
+				<div class="history__heading">
+					<h2>history</h2>
+					<p>
+						In 2008, lead singer Dan Reynolds met drummer Andrew Tolman at Brigham Young University where they were both students.Tolman recruited longtime high school friend Daniel Wayne "Wing" Sermon, who had graduated from Berklee College of Music
+					</p>
+				</div>
+			</div>
+			<div class="history__slider">
+				<div class="history-slider-item">
+					<hr />
+					<h3>feb 3</h3>
+					<hr />
+				</div>
+				<div class="history-slider-item">
+					<hr />
+					<h3>feb 18</h3>
+					<hr />
+				</div>
+				<div class="history-slider-item">
+					<hr />
+					<h3>mar 1</h3>
+					<hr />
+				</div>
+				<div class="history-slider-item">
+					<hr>
+					<h3>mar 16</h3>
+					<hr />
+				</div>
 
-    <div class="history-slider-item">
-      <hr />
-      <h3>apr 11</h3>
-      <hr />
-    </div>
-    <div class="history-slider-item">
-      <hr>
-      <h3>may 09</h3>
-      <hr />
-    </div>
-    <div class="history-slider-item">
-      <hr>
-      <h3>jun 06</h3>
-      <hr />
-    </div>
-    <div class="history-slider-item">
-      <hr>
-      <h3>jul 25</h3>
-      <hr />
-    </div>
-  </div>
-  <div class="history__slider__text">
-    <div>
-      <p>
-        Tolman later recruited his wife, Brittany Tolman, to sing backup and play keys.
-      </p>
-    </div>
-    <div>
-      <p>
-        Dan Reynolds met drummer Andrew Tolman at Brigham Young University
-      </p>
-    </div>
-    <div>
-      <p>
-        Brittany Tolman, to sing backup and play keys.
-      </p>
-    </div>
-    <div>
-      <p>
-        Tolman later recruited his wife, Brittany Tolman, to sing backup and play keys.
-      </p>
-    </div>
-    <div>
-      <p>
-        Tolman later recruited his wife.
-      </p>
-    </div>
-  </div>
-</div>
+				<div class="history-slider-item">
+					<hr />
+					<h3>apr 11</h3>
+					<hr />
+				</div>
+				<div class="history-slider-item">
+					<hr>
+					<h3>may 09</h3>
+					<hr />
+				</div>
+				<div class="history-slider-item">
+					<hr>
+					<h3>jun 06</h3>
+					<hr />
+				</div>
+				<div class="history-slider-item">
+					<hr>
+					<h3>jul 25</h3>
+					<hr />
+				</div>
+			</div>
+			<div class="history__slider__text">
+				<div>
+					<p>
+						Tolman later recruited his wife, Brittany Tolman, to sing backup and play keys.
+					</p>
+				</div>
+				<div>
+					<p>
+						Dan Reynolds met drummer Andrew Tolman at Brigham Young University
+					</p>
+				</div>
+				<div>
+					<p>
+						Brittany Tolman, to sing backup and play keys.
+					</p>
+				</div>
+				<div>
+					<p>
+						Tolman later recruited his wife, Brittany Tolman, to sing backup and play keys.
+					</p>
+				</div>
+				<div>
+					<p>
+						Tolman later recruited his wife.
+					</p>
+				</div>
+			</div>
+		</div>
 	</section>
 	<!-- end of history -->
-	<footer class="contact">
+	<footer id="js-contact" class="contact">
 		<div class="container">
 			<div class="row">
 				<div class="col-xs-12 col-sm-6 col-sm-offset-6">
@@ -545,6 +555,7 @@
 	<!-- end of contact -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/jquery.slick/1.5.9/slick.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 	<script src="js/script.js"></script>
 </body>
 

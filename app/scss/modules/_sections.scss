@@ -43,6 +43,7 @@
 .upcoming {
   @extend %background;
   background-image: url('../img/upcoming_background.jpg');
+  padding-top: 10%;
   padding-bottom: 20%;
 }
 //history
