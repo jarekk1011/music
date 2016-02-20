@@ -2,6 +2,15 @@
 @import 'compass/css3';
 @import 'compass/utilities';
 
+//animate
+@import '../vendor/animatewithsass/_properties';
+
+@import '../vendor/animatewithsass/_fading-entrances/_fadeInLeft';
+@import '../vendor/animatewithsass/_fading-entrances/_fadeInRight';
+@import '../vendor/animatewithsass/_fading-entrances/_fadeIn';
+@import '../vendor/animatewithsass/_fading-entrances/_fadeInUp';
+
+
 * {
   margin: 0;
   padding: 0;
@@ -15,9 +24,18 @@ body {
 hr {
   border-top: 1px solid $black;
 }
-// .container{
-//   width:1200px;
-// }
+
 ul {
   list-style: none;
 }
+
+//animations
+.fadeInUp {@include fadeInUp();}
+
+.fadeInRight {@include fadeInRight();}
+
+// .fadeInDown {@include fadeInDown();}
+
+.fadeInLeft {@include fadeInLeft();}
+
+.fadeIn {@include fadeIn();}

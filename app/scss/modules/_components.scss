@@ -169,10 +169,28 @@ h1 {
 //upcoming
 .vertical-line-short {
   @extend %line;
-  height: calculateRem(50px);
+  // height: calculateRem(50px);
+  height: 0;
 }
 
 .vertical-line-long {
   @extend %line;
-  height: calculateRem(165px);
+  // height: calculateRem(165px);
+  height: 0;
+}
+
+%line-container {
+  margin-bottom: 10px;
+  display: block;
+}
+
+
+.short-line {
+  @extend %line-container;
+  height: 50px;
+}
+
+.long-line {
+  @extend %line-container;
+  height: 165px;
 }
