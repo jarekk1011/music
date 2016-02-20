@@ -42,9 +42,10 @@
 //upcoming
 .upcoming {
   @extend %background;
+  height: 0;
   background-image: url('../img/upcoming_background.jpg');
   padding-top: 10%;
-  padding-bottom: 20%;
+  padding-bottom: 50%;
 }
 //history
 .history {

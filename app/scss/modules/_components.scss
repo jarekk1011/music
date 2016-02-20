@@ -165,14 +165,17 @@ h1 {
   display: block;
   margin-left: calculateRem(35px);
   width: 1px;
+  margin-bottom: 10px;
 }
 //upcoming
 .vertical-line-short {
   @extend %line;
-  height: calculateRem(50px);
+  // height: calculateRem(50px);
+  height: 0;
 }
 
 .vertical-line-long {
   @extend %line;
-  height: calculateRem(165px);
+  // height: calculateRem(165px);
+  height: 0;
 }
