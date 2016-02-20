@@ -111,3 +111,15 @@
     display: block !important;
   }
 }
+
+@media screen and (max-width: 1300px){
+
+  html,
+  {
+    font-size: 90%;
+  }
+
+  .concert__list {
+    padding-top: 10%;
+  }
+}

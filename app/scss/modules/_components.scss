@@ -165,7 +165,6 @@ h1 {
   display: block;
   margin-left: calculateRem(35px);
   width: 1px;
-  margin-bottom: 10px;
 }
 //upcoming
 .vertical-line-short {
@@ -178,4 +177,20 @@ h1 {
   @extend %line;
   // height: calculateRem(165px);
   height: 0;
+}
+
+%line-container {
+  margin-bottom: 10px;
+  display: block;
+}
+
+
+.short-line {
+  @extend %line-container;
+  height: 50px;
+}
+
+.long-line {
+  @extend %line-container;
+  height: 165px;
 }

@@ -125,12 +125,15 @@ $(document).ready(function(){
     }, { offset: '50%' });
     //upcoming animation
     $upcomingAnimation[0].waypoint(function(){
+
       $upcomingAnimation[0].addClass('fadeInLeft');
-      $linesAnimation[0].animate({height: '50px'}, 500);
+      setTimeout(function(){
+        $linesAnimation[0].animate({height: '50px'}, 500);
+      }, 500);
       setTimeout(function(){
         $upcomingAnimation[1].addClass('fadeInLeft');
-      }, 500);
-      $linesAnimation[1].delay(800)
+      }, 800);
+      $linesAnimation[1].delay(1000)
                         .animate({height: '165px'}, 1000);
       setTimeout(function(){
         $upcomingAnimation[2].addClass('fadeInLeft');

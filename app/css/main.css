@@ -782,7 +782,6 @@ h1 {
   display: block;
   margin-left: 2.1875rem;
   width: 1px;
-  margin-bottom: 10px;
 }
 
 .vertical-line-short {
@@ -791,6 +790,19 @@ h1 {
 
 .vertical-line-long {
   height: 0;
+}
+
+.short-line, .long-line {
+  margin-bottom: 10px;
+  display: block;
+}
+
+.short-line {
+  height: 50px;
+}
+
+.long-line {
+  height: 165px;
 }
 
 input {
@@ -854,10 +866,10 @@ input {
 }
 
 .upcoming {
-  height: 0;
   background-image: url("../img/upcoming_background.jpg");
+  margin-top: 5%;
   padding-top: 10%;
-  padding-bottom: 50%;
+  padding-bottom: 5%;
 }
 
 .history {
@@ -1360,5 +1372,14 @@ h1 img {
 
   .collapse.in {
     display: block !important;
+  }
+}
+@media screen and (max-width: 1300px) {
+  html {
+    font-size: 90%;
+  }
+
+  .concert__list {
+    padding-top: 10%;
   }
 }
