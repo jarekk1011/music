@@ -1,13 +1,18 @@
 .logo {
-  display: block;
-  margin: 0 auto;
-  padding-top: 13%;
-  position: relative;
-}
+  text-align: center;
 
-h1 img {
-  height: auto;
-  max-width: 100%;
+  img {
+    display: inline-block;
+    text-align: center;
+    margin: 0 auto;
+    max-width: 100%;
+    padding-top: 15%;
+
+    @media(orientation:landscape){
+      padding-top: 10%;
+      width: 45vh;
+    }
+  }
 }
 
 .social-icon {

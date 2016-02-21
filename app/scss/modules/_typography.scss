@@ -8,7 +8,8 @@ h6 {
 }
 
 h2 {
-  @include font-size(50px);
+  @include font-size(33px);
+  // @include font-size(50px);
   display: inline-block;
   position: relative;
   font-family: $dosis-font-family;
@@ -16,6 +17,11 @@ h2 {
   padding: 0 15px;
   white-space: nowrap;
   color: $darkGray;
+
+  @media (min-width: $tablet){
+    @include font-size(50px);
+    
+  }
 }
 
 h2::before {

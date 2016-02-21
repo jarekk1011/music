@@ -9,8 +9,13 @@
 }
 
 .slider__text p {
-  padding-left: 15%;
-  padding-right: 15%;
+  padding-left: 5%;
+  padding-right: 5%;
+
+  @media(min-width: $tablet){
+    padding-left: 12%;
+    padding-right: 12%;
+  }
 }
 
 .music-icon {
@@ -46,7 +51,17 @@
 
 .history__slider__text p {
   text-align: center;
-  padding: 0 43%;
+  padding: 0 30%;
+
+  @media(min-width: $mobile) {
+    padding-top: 5%;
+    padding-bottom: 5%;
+  }
+
+  @media(min-width: $tablet) {
+    padding-left: 35%;
+    padding-right: 35%;
+  }
 }
 
 $slick-dot-character: '\f111' !default;

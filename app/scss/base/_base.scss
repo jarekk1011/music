@@ -18,7 +18,19 @@
 
 html,
 body {
-  font-size: 100%;
+  font-size: 80%;
+  @media(min-width: $mobile){
+    font-size: 85%;
+  }
+  @media(min-width: $tablet){
+    font-size: 90%;
+  }
+  @media(min-width: $desktop){
+    font-size: 95%;
+  }
+  @media(min-width: $lgDesktop){
+    font-size: 100%;
+  }
 }
 
 hr {
