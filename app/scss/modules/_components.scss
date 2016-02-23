@@ -71,10 +71,6 @@
   padding-top: 0;
 }
 
-.row {
-  overflow: hidden;
-}
-
 .latter__text {
   padding: calculateRem(15px);
   background-color: $lightgray;
@@ -109,8 +105,8 @@
 }
 
 .new__list li {
-  margin-bottom: calculateRem(30px);
   @extend %center-column-mobile;
+  margin-bottom: calculateRem(30px);
 }
 
 .new-img {

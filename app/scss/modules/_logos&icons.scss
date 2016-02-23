@@ -1,16 +1,23 @@
-.logo {
-  text-align: center;
-
-  img {
-    display: inline-block;
+.header {
+  .logo {
     text-align: center;
-    margin: 0 auto;
-    max-width: 100%;
-    padding-top: 15%;
 
-    @media(orientation:landscape){
-      padding-top: 10%;
-      width: 45vh;
+    img {
+      display: inline-block;
+      text-align: center;
+      margin: 0 auto;
+      max-width: 100%;
+      padding-top: 15%;
+
+      @media(orientation:landscape){
+        padding-top: 10%;
+        width: 45vh;
+      }
+    }
+}
+  .navbar-default {
+    .icon-bar {
+      background-color: $white;
     }
   }
 }

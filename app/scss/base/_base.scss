@@ -16,18 +16,23 @@
   padding: 0;
 }
 
-html,
-body {
+
+body,
+html {
   font-size: 80%;
+
   @media(min-width: $mobile){
     font-size: 85%;
   }
+
   @media(min-width: $tablet){
     font-size: 90%;
   }
+
   @media(min-width: $desktop){
-    font-size: 95%;
+    font-size: 85%;
   }
+
   @media(min-width: $lgDesktop){
     font-size: 100%;
   }
@@ -39,6 +44,10 @@ hr {
 
 ul {
   list-style: none;
+}
+
+.row {
+  overflow: hidden;
 }
 
 //animations

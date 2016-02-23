@@ -1,3 +1,11 @@
+%background {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: auto;
+  width: 100%;
+}
+
 .discography__heading,
 .concert__heading,
 .latter__heading,
@@ -68,7 +76,7 @@
 .history {
   @extend %background;
   background-image: url('../img/history_background.jpg');
-  padding-bottom: 90%;
+  padding-bottom: 100%;
 
   @media(min-width: $mobile){
     padding-bottom: 70%;

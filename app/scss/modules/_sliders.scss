@@ -1,20 +1,21 @@
 
 .slider__text {
   text-align: center;
-}
 
-.slider__text h5,
-.slider__text p {
-  padding-bottom: calculateRem(15px);
-}
+  h5,
+  p {
+    padding-bottom: calculateRem(15px);
+  }
 
-.slider__text p {
-  padding-left: 5%;
-  padding-right: 5%;
+  p {
+    padding-bottom: calculateRem(15px);
+    padding-left: 5%;
+    padding-right: 5%;
 
-  @media(min-width: $tablet){
-    padding-left: 12%;
-    padding-right: 12%;
+    @media(min-width: $tablet){
+      padding-left: 12%;
+      padding-right: 12%;
+    }
   }
 }
 
@@ -42,11 +43,11 @@
   margin: 0 auto;
   text-align: center;
   outline: 0;
-}
 
-.history-slider-item h3 {
-  display: inline-block;
-  padding: 0 5px;
+  h3 {
+    display: inline-block;
+    padding: 0 5px;
+  }
 }
 
 .history__slider__text p {
@@ -54,13 +55,27 @@
   padding: 0 30%;
 
   @media(min-width: $mobile) {
-    padding-top: 5%;
-    padding-bottom: 5%;
+    padding-top: 0;
+    padding-bottom: 10%;
   }
 
   @media(min-width: $tablet) {
+    padding-top: 5%;
+    padding-bottom: 5%;
     padding-left: 35%;
     padding-right: 35%;
+  }
+
+  @media(min-width: $desktop){
+    padding-top: 10%;
+    padding-bottom: 0;
+    padding-left: 40%;
+    padding-right: 40%;
+  }
+
+  @media(min-width: $lgDesktop){
+    padding-top: 8%;
+    padding-bottom: 2%;
   }
 }
 
@@ -94,6 +109,7 @@ $slick-opacity-not-active: 1 !default;
   border-top: 1px solid $darkGray;
 }
 
+//slick customize
 .slick-dots {
   position: absolute;
   list-style: none;
