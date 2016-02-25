@@ -1,6 +1,6 @@
 .hell-button {
-  background-image: url('../img/play_hell.jpg');
   color: $white;
+  background-position: top top;
 }
 
 .night-button,
@@ -9,15 +9,16 @@
 }
 
 .night-button {
-  background-image: url('../img/play_night.jpg');
+  background-position: center center;
 }
 
 .smoke-button {
-  background-image: url('../img/play_smoke.png');
+  background-position: bottom center;
 }
 
 .discography__buttons {
-  background-position: center;
+  // background-position: center;
+  background-image: url('../img/play-sprite.jpg');
   background-repeat: no-repeat;
   border: 0;
   display: block;
