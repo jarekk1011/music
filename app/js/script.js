@@ -243,29 +243,35 @@ $(document).ready(function() {
           ];
 
     function player(song, dupa) {
+
     var  e = music.length;
     var $seek = dupa.find('.seek');
     var $play = dupa.find('.play-pause');
     var $time = dupa.find('.current-time');
+    var $totalTime = dupa.find('.total-time');
   	$play.on('click', function() {
-      for(var t = 0 ;t < e ; t++){
-        console.log(t);
-        music[t].pause();
-        $('.play-pause').removeClass('fa-pause').addClass('fa-play');
-      }
+      console.log('Start Player');
 
   		if (song.paused) {
+        for(var t = 0 ;t < e ; t++){
+          console.log(t);
+          music[t].pause();
+          $('.play-pause').removeClass('fa-pause').addClass('fa-play');
+          console.log('All Paused');
+        }
             song.play();
             console.log('Song played');
             $play.removeClass('fa-play').addClass('fa-pause');
             $seek.attr('max', song.duration);
   		} else {
+
+
     			song.pause();
           console.log('Song paused');
     			$play.removeClass('fa-pause').addClass('fa-play');
   		}
 
-
+      console.log('Player End ...');
   	});
   	$seek.bind("change", function() {
   		song.currentTime = $(this).val();
@@ -276,13 +282,12 @@ $(document).ready(function() {
   		curtime = parseInt(song.currentTime, 10);
   		$seek.val(curtime);
   		$time.html(formatTime(song.currentTime));
-  		$latter.find('.total-time').after('<span class="total-time"> / ' + formatTime(song.duration) + '</span>').remove();
+  		$totalTime.after('<span class="total-time"> / ' + formatTime(song.duration) + '</span>').remove();
   	});
   	song.addEventListener('ended', function() {
   		$play.removeClass('fa-pause').addClass('fa-play');
       console.log('Song ended and paused');
   	});
-
   	function formatTime(seconds) {
   		minutes = Math.floor(seconds / 60);
   		minutes = (minutes >= 10) ? minutes : "" + minutes;
