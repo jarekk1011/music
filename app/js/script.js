@@ -124,12 +124,12 @@ $(document).ready(function() {
   $discrographyAnimation[0].waypoint(function() {
   	fadeInDelay($discrographyAnimation, 'fadeInUp');
   }, {
-  	offset: '50%'
+  	offset: '60%'
   });
   $concertAnimation[0].waypoint(function() {
   	fadeInDelay($concertAnimation, 'fadeInLeft');
   }, {
-  	offset: '50%'
+  	offset: '60%'
   });
   $latterAnimation[0].waypoint(function() {
   	fadeInDelay($latterAnimation, 'fadeInUp');
@@ -224,6 +224,84 @@ $(document).ready(function() {
 			fade: true,
 		});
 	}
+  var
+  // var jazzy = document.getElementById('jazzy'),
+      // happiness = document.getElementById('happiness'),
+      // sweet = document.getElementById('sweet'),
+      $jazzy = $latter.find('.jazzy-play'),
+      $happiness=$latter.find('.happiness-play'),
+      $sweet= $latter.find('.sweet-play'),
+
+      $jazzyPlay = $jazzy.find('.play-pause'),
+      $happinessPlay = $happiness.find('.play-pause'),
+      $sweetPlay = $sweet.find('.play-pause'),
+      // $seek = $latter.find('.seek');
+      music = [
+            new Audio('../music/bensound-jazzyfrenchy.mp3'),
+            new Audio('../music/bensound-happiness.mp3'),
+            new Audio('../music/bensound-sweet.mp3'),
+          ];
+
+    function player(song, dupa) {
+    var  e = music.length;
+    var $seek = dupa.find('.seek');
+    var $play = dupa.find('.play-pause');
+    var $time = dupa.find('.current-time');
+  	$play.on('click', function() {
+      for(var t = 0 ;t < e ; t++){
+        console.log(t);
+        music[t].pause();
+        $('.play-pause').removeClass('fa-pause').addClass('fa-play');
+      }
+
+  		if (song.paused) {
+            song.play();
+            console.log('Song played');
+            $play.removeClass('fa-play').addClass('fa-pause');
+            $seek.attr('max', song.duration);
+  		} else {
+    			song.pause();
+          console.log('Song paused');
+    			$play.removeClass('fa-pause').addClass('fa-play');
+  		}
+
+
+  	});
+  	$seek.bind("change", function() {
+  		song.currentTime = $(this).val();
+  		$seek.attr("max", song.duration);
+  	});
+
+  	song.addEventListener('timeupdate', function() {
+  		curtime = parseInt(song.currentTime, 10);
+  		$seek.val(curtime);
+  		$time.html(formatTime(song.currentTime));
+  		$latter.find('.total-time').after('<span class="total-time"> / ' + formatTime(song.duration) + '</span>').remove();
+  	});
+  	song.addEventListener('ended', function() {
+  		$play.removeClass('fa-pause').addClass('fa-play');
+      console.log('Song ended and paused');
+  	});
+
+  	function formatTime(seconds) {
+  		minutes = Math.floor(seconds / 60);
+  		minutes = (minutes >= 10) ? minutes : "" + minutes;
+  		seconds = Math.floor(seconds % 60);
+  		seconds = (seconds >= 10) ? seconds : "0" + seconds;
+  		return minutes + ":" + seconds;
+  	}
+
+  }
+  // $jazzyPlay.on('click', player(jazzy, $jazzyPlay));
+  // $happinessPlay.on('click',player(happiness, $happinessPlay));
+  // $sweetPlay.on('click', player(sweet, $sweetPlay));
+
+//array
+  $jazzyPlay.on('click', player(music[0], $jazzy));
+  $happinessPlay.on('click',player(music[1], $happiness));
+  $sweetPlay.on('click', player(music[2], $sweet));
+
+
 	scrolls();
 	animate();
 	sliderSet();
