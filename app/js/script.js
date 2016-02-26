@@ -225,69 +225,75 @@ $(document).ready(function() {
 		});
 	}
   var
-  // var jazzy = document.getElementById('jazzy'),
-      // happiness = document.getElementById('happiness'),
-      // sweet = document.getElementById('sweet'),
-      $jazzy = $latter.find('.jazzy-play'),
-      $happiness=$latter.find('.happiness-play'),
-      $sweet= $latter.find('.sweet-play'),
+  	$jazzy = $latter.find('.jazzy-play'),
+  	$happiness = $latter.find('.happiness-play'),
+  	$sweet = $latter.find('.sweet-play'),
 
-      $jazzyPlay = $jazzy.find('.play-pause'),
-      $happinessPlay = $happiness.find('.play-pause'),
-      $sweetPlay = $sweet.find('.play-pause'),
-      // $seek = $latter.find('.seek');
-      music = [
-            new Audio('../music/bensound-jazzyfrenchy.mp3'),
-            new Audio('../music/bensound-happiness.mp3'),
-            new Audio('../music/bensound-sweet.mp3'),
-          ];
+  	$jazzyPlay = $jazzy.find('.play-pause'),
+  	$happinessPlay = $happiness.find('.play-pause'),
+  	$sweetPlay = $sweet.find('.play-pause'),
+  	music = [
+  		new Audio('../music/bensound-jazzyfrenchy.mp3'),
+  		new Audio('../music/bensound-happiness.mp3'),
+  		new Audio('../music/bensound-sweet.mp3'),
+  	];
 
-    function player(song, dupa) {
+  function player(song, dupa) {
+  	var e = music.length;
+  	var $seek = dupa.find('.seek');
+  	var $play = dupa.find('.play-pause');
+  	var $time = dupa.find('.current-time');
+  	var $totalTime = dupa.find('.total-time');
 
-    var  e = music.length;
-    var $seek = dupa.find('.seek');
-    var $play = dupa.find('.play-pause');
-    var $time = dupa.find('.current-time');
-    var $totalTime = dupa.find('.total-time');
-  	$play.on('click', function() {
-      console.log('Start Player');
-
+    //click play button
+    $play.on('click', function() {
+  		console.log('Start Player');
+      //set max length of song
+      $seek.attr('max', song.duration);
+      //play event
   		if (song.paused) {
-        for(var t = 0 ;t < e ; t++){
-          console.log(t);
-          music[t].pause();
-          $('.play-pause').removeClass('fa-pause').addClass('fa-play');
-          console.log('All Paused');
-        }
-            song.play();
-            console.log('Song played');
-            $play.removeClass('fa-play').addClass('fa-pause');
-            $seek.attr('max', song.duration);
+  			for (var i = 0; i < e; i++) {
+  				console.log(i);
+          //stop all music except this one
+  				if (music[i] != song) {
+  					music[i].pause();
+  					console.log('music ' + i);
+  					music[i].currentTime = 0;
+  				}
+  				$('.play-pause').removeClass('fa-pause').addClass('fa-play');
+  				console.log('All Paused');
+  			}
+        //click play event
+  			song.play();
+  			console.log('Song played');
+  			$play.removeClass('fa-play').addClass('fa-pause');
   		} else {
-
-
-    			song.pause();
-          console.log('Song paused');
-    			$play.removeClass('fa-pause').addClass('fa-play');
+        //pause event
+  			song.pause();
+  			console.log('Song paused');
+  			$play.removeClass('fa-pause').addClass('fa-play');
   		}
-
-      console.log('Player End ...');
+  		console.log('Player End ...');
   	});
-  	$seek.bind("change", function() {
+    //update song time on knob slide
+  	$seek.on('change', function() {
   		song.currentTime = $(this).val();
-  		$seek.attr("max", song.duration);
+      console.log(song.duration);
   	});
-
+    //uptade song current time
   	song.addEventListener('timeupdate', function() {
   		curtime = parseInt(song.currentTime, 10);
   		$seek.val(curtime);
   		$time.html(formatTime(song.currentTime));
   		$totalTime.after('<span class="total-time"> / ' + formatTime(song.duration) + '</span>').remove();
   	});
+    //trigger when song ended
   	song.addEventListener('ended', function() {
   		$play.removeClass('fa-pause').addClass('fa-play');
-      console.log('Song ended and paused');
+  		song.currentTime = 0;
+  		console.log('Song ended and paused');
   	});
+
   	function formatTime(seconds) {
   		minutes = Math.floor(seconds / 60);
   		minutes = (minutes >= 10) ? minutes : "" + minutes;
@@ -297,17 +303,12 @@ $(document).ready(function() {
   	}
 
   }
-  // $jazzyPlay.on('click', player(jazzy, $jazzyPlay));
-  // $happinessPlay.on('click',player(happiness, $happinessPlay));
-  // $sweetPlay.on('click', player(sweet, $sweetPlay));
-
-//array
   $jazzyPlay.on('click', player(music[0], $jazzy));
-  $happinessPlay.on('click',player(music[1], $happiness));
+  $happinessPlay.on('click', player(music[1], $happiness));
   $sweetPlay.on('click', player(music[2], $sweet));
 
 
-	scrolls();
-	animate();
-	sliderSet();
-});
+  scrolls();
+  animate();
+  sliderSet();
+  });
