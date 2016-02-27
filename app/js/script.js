@@ -279,6 +279,7 @@ $(document).ready(function() {
   	$seek.on('change', function() {
   		song.currentTime = $(this).val();
       console.log(song.duration);
+      $seek.attr('max', song.duration);
   	});
     //uptade song current time
   	song.addEventListener('timeupdate', function() {
