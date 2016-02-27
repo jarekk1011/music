@@ -28,15 +28,19 @@
 
 .slider__button {
   padding: 10% 0;
-}
 
-.right {
-  clear: both;
-  float: right;
-}
+  .slick-arrow {
+    cursor: pointer;
+  }
 
-.left {
-  @include transform(rotate(-180deg));
+  .right {
+    clear: both;
+    float: right;
+  }
+
+  .left {
+    @include transform(rotate(-180deg));
+  }
 }
 
 .history-slider-item {
