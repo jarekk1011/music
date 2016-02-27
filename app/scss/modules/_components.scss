@@ -1,6 +1,7 @@
 //hr
 %hr {
   margin: 0;
+  text-align: left;
 }
 
 .concert hr,
@@ -21,7 +22,7 @@
 }
 
 .discography hr {
-  margin: 0;
+  @extend %hr;
 }
 
 .history__slider hr {
@@ -101,10 +102,6 @@
 .new {
   display: block;
   margin: 0 auto;
-
-  &__list {
-    margin-top: 5%;
-  }
 
   &__list li {
     @extend %center-column-mobile;

@@ -19,6 +19,12 @@
 .upcoming__heading {
   padding-top: calculateRem(20px);
 }
+
+.history__heading {
+  @media(max-width: $mobile - 1) {
+    padding-bottom: 0;
+  }
+}
 //discography
 .discography {
   background: url('../img/discography_background.jpg') center bottom no-repeat;
@@ -31,40 +37,45 @@
   background-image: url('../img/concert_background.jpg');
   padding-bottom: 10%;
 
-}
+  .concert__list {
+    padding-top: 0;
 
-.concert__list {
-  padding-top: 0;
+    @media(min-width: $desktop){
+      padding-top: 10%;
+    }
+  }
 
-  @media(min-width: $desktop){
-    padding-top: 10%;
+  .concert__list__description {
+    padding-bottom: calculateRem(35px);
   }
 }
 
-.concert__list__description {
-  padding-bottom: calculateRem(35px);
-}
 
-.latter{
+.latter {
 
   .row {
     margin-right: 0;
     margin-left: 0;
   }
-}
 
-.latter__stats {
-  padding: calculateRem(20px) 0;
-  @media(min-width: $lgDesktop) {
-    padding: calculateRem(50px) 0;
+  .latter__stats {
+    padding: calculateRem(20px) 0;
+
+    @media(min-width: $lgDesktop) {
+      padding: calculateRem(50px) 0;
+    }
   }
 }
+
 //slider
 .slider {
   @extend %background;
   background-image: url('../img/slider.jpg');
 }
 
+.new {
+  padding: 5% 0 3%;
+}
 //upcoming
 .upcoming {
   @extend %background;
