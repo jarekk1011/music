@@ -211,49 +211,97 @@
 
 .player {
   position: absolute;
-  bottom: 10px;
+  bottom: 5px;
   color: $white;
-  display: inline-block;
   width: 100%;
-}
 
-.play-pause {
-  display: inline;
-  margin-left: calculateRem(30px);
-  cursor: pointer;
-}
-
-.player input[type="range"] {
-  display: inline-block;
-  width: 68%;
-  height: 5px;
-  background-color: $coolgray;
-  margin-left: calculateRem(15px);
-  margin-bottom: calculateRem(3px);
-  -webkit-appearance: none;
-  border: 1px solid rgba(0, 0, 0, 1);
-  cursor: pointer;
-}
-
-.dot {
-  // visibility: hidden;
-  cursor: pointer;
-  position: absolute;
-  bottom: calculateRem(10px);
-  margin-left: 54px;
-
-  @media(min-width: $desktop){
-    bottom: calculateRem(7px);
+  .play-pause {
+    display: inline;
+    cursor: pointer;
+    font-size: calculateRem(30px);
+    padding-left: 10px;
+    margin-top: 5px;
+    @media(min-width: $desktop){
+      font-size: calculateRem(25px);
+    }
   }
+
+  .timer {
+    margin-top: 7px;
+    white-space: nowrap;
+
+    @media(min-width: $desktop){
+      margin-top: 0;
+    }
+
+    .current-time {
+      color: $white;
+    }
+  }
+  //webkit + mozilla
+  input[type=range] {
+    width: 100%;
+    -webkit-appearance: none;
+    padding: 10px 0;
+    cursor: pointer;
+ }
+
+  input[type=range]::-webkit-slider-runnable-track {
+    height: calculateRem(13px);
+    background: $gray;
+    border: 0;
+    margin-left: 15px;
+
+    @media(min-width: $desktop){
+      height: calculateRem(3px);
+    }
 }
 
-.timer {
-  display: inline;
-  float: right;
-  padding-right: calculateRem(30px);
-  clear: both;
-}
+  input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border: 0;
+    height: calculateRem(25px);
+    width: calculateRem(25px);
+    // padding: calculateRem(10px);
+    border-radius: 50%;
+    background: $white;
+    margin-top: -5px;
+    cursor: pointer;
+    margin-left: -1px;
 
-.current-time {
-  color: $white;
+    @media(min-width: $desktop){
+      margin-top: -5px;
+      height: calculateRem(15px);
+      width: calculateRem(15px);
+    }
+  }
+
+  input[type=range]:focus {
+    outline: none;
+  }
+  //IE
+  input[type=range]::-ms-track {
+    width: 100%;
+    padding: 10px 0;
+    cursor: pointer;
+    height: calculateRem(13px);
+    background: $gray;
+    border: 0;
+    margin-left: 15px;
+
+    @media(min-width: $desktop){
+      height: calculateRem(3px);
+    }
+  }
+
+  input[type=range]::-ms-thumb {
+    border: 0;
+    height: calculateRem(25px);
+    width: calculateRem(25px);
+    border-radius: 50%;
+    background: $white;
+    margin-top: -5px;
+    cursor: pointer;
+    margin-left: -1px;
+  }
 }
