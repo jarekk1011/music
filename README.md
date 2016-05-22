@@ -1,12 +1,12 @@
-Music Free Template
+#Music Free Template
 
 ### Live version:
 
-[MoGo Template Live](http://jaroslawkuca.pl/music/)
+[Music Template Live](http://jaroslawkuca.pl/music/)
 
 ### PSD Version:
 
-[MoGo Template PSD](https://www.behance.net/gallery/28602791/Free-responsive-PSD-template-for-musician)
+[Music Template PSD](https://www.behance.net/gallery/28602791/Free-responsive-PSD-template-for-musician)
 
 ### Designed by:
 
