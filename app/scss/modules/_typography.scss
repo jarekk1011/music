@@ -20,8 +20,12 @@ h2 {
 
   @media (min-width: $tablet){
     @include font-size(50px);
-    
   }
+}
+
+.contact-h2 {
+  padding-left: 15px;
+  padding-right: 52%;
 }
 
 h2::before {
@@ -39,24 +43,16 @@ h2::before {
   color: #9c7051;
   text-fill-color: #9c7051;
   background: -webkit-linear-gradient(0deg, #9c7051, #8d7274);
-  -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text;
   background: -moz-linear-gradient(transparent, transparent);
   background: -o-linear-gradient(transparent, transparent);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
   -moz-text-fill-color: transparent;
   -o-text-fill-color: transparent;
 }
 
 .concert h2 {
   color: #62a2ad;
-  text-fill-color: #62a2ad;
-  background: -webkit-linear-gradient(270deg, #62a2ad, #8dbab3);
-  -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text;
-  background: -moz-linear-gradient(transparent, transparent);
-  background: -o-linear-gradient(transparent, transparent);
-  -moz-text-fill-color: transparent;
-  -o-text-fill-color: transparent;
 }
 
 .upcoming {

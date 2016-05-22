@@ -2,14 +2,13 @@ $(document).ready(function() {
 	var $discography = $('#js-discography'),
   		$history     = $('#js-history'),
   		$latter      = $('#js-latter'),
-  		$new         = $('#js-new'),
   		$upcoming    = $('#js-upcoming'),
   		$slider      = $('#js-slider'),
       $contact     = $('#js-contact'),
-  		$aLink       = $('#js-header ul li a'),
+  		$aLink       = $('#js-header li a'),
       $jsNav       = $('#js-nav');
-//scrolling functions
-	function scrolls() {
+
+    //scrolling functions
 		$(window).scroll(function() {
 			if ($(window).scrollTop() < $(window).height()) {
 				$jsNav.removeClass('navigation');
@@ -34,80 +33,50 @@ $(document).ready(function() {
           $('.navbar-toggle:visible').click();
   });
 		if (navigator.userAgent.toLowerCase().indexOf('firefox') > -1) {
-			//temporary firefox change
-			$($aLink).removeClass('nav-item-active-js');
+			// temporary firefox change
+			$aLink.removeClass('nav-item-active-js');
 		} else {
 			var scrolling = function() {
-				$(document).on("scroll", onScroll);
-
-				function onScroll(event) {
-					var scrollPos = $(document).scrollTop();
-					$($aLink).each(function() {
+				$(window).on("scroll", function(){
+          var scrollPos = $(window).scrollTop();
+					$aLink.each(function() {
 						var currLink = $(this);
 						var refElement = $(currLink.attr("href"));
 						if (refElement.position().top <= scrollPos + 290 && refElement.position().top + refElement.height() > scrollPos) {
-							$($aLink).removeClass("nav-item-active-js");
+							$aLink.removeClass("nav-item-active-js");
 							currLink.addClass("nav-item-active-js");
 						} else {
 							currLink.removeClass("nav-item-active-js");
 						}
 					});
-				}
+        });
 			};
 			scrolling();
 		}
-	}
+
 //animation function
 	function animate() {
+    var	$discrographyAnimation = [],
+    		$concertAnimation = [],
+    		$latterAnimation = [],
+    		$newAnimation = [],
+    		$upcomingAnimation = [],
+    		$linesAnimation = [],
+        $contactAnimation = [],
+        eachElOf = function(items, animationArray){
+          $(items).each(function(){
+            var thisEl = $(this);
+            animationArray.push(thisEl);
+          });
+        };
+    eachElOf('.discography__row', $discrographyAnimation);
+    eachElOf('.concert__list', $concertAnimation);
+    eachElOf('.latter__item', $latterAnimation);
+    eachElOf('.new-img', $newAnimation);
+    eachElOf('.event', $upcomingAnimation);
+    eachElOf('.lines', $linesAnimation);
+    eachElOf('.contact__main', $contactAnimation);
 
-		var animation = [];
-		$discrographyAnimation = [
-			$discography.find('div.discography__row1--fadeInUp'),
-			$discography.find('div.discography__row2--fadeInUp'),
-			$discography.find('div.discography__row3--fadeInUp'),
-		];
-		$concertAnimation = [
-			$('#concert__list--fadeInLeft'),
-		];
-		$latterAnimation = [
-			$latter.find('.latter__1'),
-			$latter.find('.latter__2'),
-			$latter.find('.latter__3'),
-		];
-		$newAnimation = [
-			// $new.find('.new-img'),
-			$new.find('.new_01'),
-			$new.find('.new_02'),
-			$new.find('.new_03'),
-			$new.find('.new_04'),
-			$new.find('.new_05'),
-			$new.find('.new_06'),
-		];
-		$upcomingAnimation = [
-			$upcoming.find('.upcoming__event-1'),
-			$upcoming.find('.song-date1'),
-			$upcoming.find('.upcoming__event-2'),
-			$upcoming.find('.song-date2'),
-		];
-		$linesAnimation = [
-			$upcoming.find('.vertical-line-short1'),
-			$upcoming.find('.vertical-line-long'),
-			$upcoming.find('.vertical-line-short2'),
-		];
-    $contactAnimation = [
-      $contact.find('div.contact__main')
-    ];
-		$animated = animation.concat($discrographyAnimation)
-			.concat($concertAnimation)
-			.concat($latterAnimation)
-			.concat($newAnimation)
-			.concat($upcomingAnimation)
-      .concat($contactAnimation);
-
-    //
-    for (var i = 0; i < $animated.length; i++) {
-			$animated[i].css('opacity', 0);
-		}
     // fadeInDelay function
 		function fadeInDelay(array, effect) {
 		var i = 0,
@@ -144,7 +113,7 @@ $(document).ready(function() {
   $contactAnimation[0].waypoint(function() {
   	fadeInDelay($contactAnimation, 'fadeInLeft');
   }, {
-  	offset: '50%'
+  	offset: '60%'
   });
 		// //upcoming animation
 		$upcomingAnimation[0].waypoint(function() {
@@ -224,61 +193,55 @@ $(document).ready(function() {
 			fade: true,
 		});
 	}
-  var
-  	$jazzy = $latter.find('.jazzy-play'),
-  	$happiness = $latter.find('.happiness-play'),
-  	$sweet = $latter.find('.sweet-play'),
 
-  	$jazzyPlay = $jazzy.find('.play-pause'),
-  	$happinessPlay = $happiness.find('.play-pause'),
-  	$sweetPlay = $sweet.find('.play-pause'),
-  	music = [
-  		new Audio('../music/bensound-jazzyfrenchy.mp3'),
-  		new Audio('../music/bensound-happiness.mp3'),
-  		new Audio('../music/bensound-sweet.mp3'),
-  	];
+  	var $jazzy = $latter.find('.jazzy-play'),
+      	$happiness = $latter.find('.happiness-play'),
+      	$sweet = $latter.find('.sweet-play'),
+      	$jazzyPlay = $jazzy.find('.play-pause'),
+      	$happinessPlay = $happiness.find('.play-pause'),
+      	$sweetPlay = $sweet.find('.play-pause'),
+      	music = [];
 
-  function player(song, dupa) {
-  	var e = music.length;
-  	var $seek = dupa.find('.seek');
-  	var $play = dupa.find('.play-pause');
-  	var $time = dupa.find('.current-time');
-  	var $totalTime = dupa.find('.total-time');
+    (function (){
+      $('.audio').each(function(){
+        var thisEl = $(this).attr('src');
+        music.push(new Audio(thisEl));
+      });
+    })();
+
+  function player(song, section) {
+  var	$seek = section.find('.seek'),
+    	$play = section.find('.play-pause'),
+    	$time = section.find('.current-time'),
+    	$totalTime = section.find('.total-time');
 
     //click play button
-    $play.on('click', function() {
-  		console.log('Start Player');
+    $play.on('click', function(e) {
+      e.preventDefault();
       //set max length of song
       $seek.attr('max', song.duration);
       //play event
   		if (song.paused) {
-  			for (var i = 0; i < e; i++) {
-  				console.log(i);
+  			for (var i = 0; i < music.length; i++) {
           //stop all music except this one
   				if (music[i] != song) {
   					music[i].pause();
-  					console.log('music ' + i);
   					music[i].currentTime = 0;
   				}
   				$('.play-pause').removeClass('fa-pause').addClass('fa-play');
-  				console.log('All Paused');
   			}
         //click play event
   			song.play();
-  			console.log('Song played');
   			$play.removeClass('fa-play').addClass('fa-pause');
   		} else {
         //pause event
   			song.pause();
-  			console.log('Song paused');
   			$play.removeClass('fa-pause').addClass('fa-play');
   		}
-  		console.log('Player End ...');
   	});
     //update song time on knob slide
   	$seek.on('change', function() {
   		song.currentTime = $(this).val();
-      console.log(song.duration);
       $seek.attr('max', song.duration);
   	});
     //uptade song current time
@@ -292,7 +255,6 @@ $(document).ready(function() {
   	song.addEventListener('ended', function() {
   		$play.removeClass('fa-pause').addClass('fa-play');
   		song.currentTime = 0;
-  		console.log('Song ended and paused');
   	});
 
   	function formatTime(seconds) {
@@ -302,14 +264,11 @@ $(document).ready(function() {
   		seconds = (seconds >= 10) ? seconds : "0" + seconds;
   		return minutes + ":" + seconds;
   	}
-
   }
+
+  animate();
+  sliderSet();
   $jazzyPlay.on('click', player(music[0], $jazzy));
   $happinessPlay.on('click', player(music[1], $happiness));
   $sweetPlay.on('click', player(music[2], $sweet));
-
-
-  scrolls();
-  animate();
-  sliderSet();
   });

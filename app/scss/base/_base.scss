@@ -34,6 +34,18 @@ html {
   }
 }
 
+a {
+  color: $white;
+
+  &:hover,
+  &:visited,
+  &:active,
+  &:link {
+    color: $white;
+    text-decoration: none;
+  }
+}
+
 hr {
   border-top: 1px solid $black;
 }

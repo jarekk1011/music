@@ -208,7 +208,7 @@
 
 .player {
   position: absolute;
-  bottom: 5px;
+  bottom: 15px;
   color: $white;
   width: 100%;
 
@@ -273,9 +273,6 @@
     }
   }
 
-  input[type=range]:focus {
-    outline: none;
-  }
   //IE
   input[type=range]::-ms-track {
     width: 100%;

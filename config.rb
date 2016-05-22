@@ -1,7 +1,7 @@
 # Compass CSS framework config file
 require 'compass-normalize'
 # Require any additional compass plugins here.
-
+sourcemap = true
 project_type = :stand_alone
 # Set this to the root of your project when deployed:
 http_path = "/"
