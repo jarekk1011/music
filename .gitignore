@@ -3,5 +3,5 @@
 node_modules/
 dist/
 bower_components
-app/css/main.css
+app/css/
 .DS_Store
