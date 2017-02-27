@@ -2,7 +2,7 @@
 
 ### Live version:
 
-[Music Template Live](http://jaroslawkuca.pl/music/)
+[Music Template Live](http://music.jarekk1011.usermd.net/)
 
 ### PSD Version:
 
